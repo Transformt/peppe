@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+   
+  <div class="container">
+   <ul class="entries">
+  {% for entry in entries %}
+    <div class="posts">
+    <img src="{{ url_for('static', filename = 'img/productpics/') }}{{ entry.simage }}" width="150" height="125" data-toggle="tooltip" title="{{ entry.subject }}">
+    <p>{{ entry.subject }} <a href="{{ url_for('contactuser') }}">{{ entry.author }}</a></p>
+    
+    </div>
+  {% else %}
+    <li><em>No advert comments available yet. Make one if you have something..</em>
+  {% endfor %}
+  
+  </ul>
+  </div>
+  </div>
+  
+    
+{% endblock %}
