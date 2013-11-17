@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block content %}
+ 
+  <div class="container">
+  <div class="formcont">
+  <div class="formtext">
+  <h1><p>Profile</p><h1>
+  <h4><p>Welcome {{ session['lastname'] }} {{ session['firstname'] }}, this is your profile page<p>
+  <br>
+  <br>
+  Name: {{ session['lastname'] }} {{ session['firstname'] }}
+  <br>
+  <br>
+  <p>Phone Number: {{ session['phone'] }} </p>
+  <br>
+  <p>Email Address: {{ session['email'] }} </p>
+  <br>
+  <p>Nationality: {{ session['country_id'] }} </p>
+  <br>
+  <p>Current Amount in Wallet: {{ session['amount'] }} </p>
+  <br>
+  <div class="stocktext">To add items to your stock. click <a href="{{ url_for('welcome') }}">here</a> 
+  and also can view what you have in stock <a href="{{ url_for('welcome') }}">here</a></div></h4>
+  </div>
+  </div>
+  </div>
+{% endblock %}
