@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+    <div class="container">
+  <div class="sign">
+  
+  <div class="signtext">
+  <h1>Wallet Creation</h1>
+        
+  
+  <form action="{{ url_for('wallet') }}" method=post>
+  <div class="control-group warning">
+    {{ form.hidden_tag() }}
+    
+    {% for message in form.squestion.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %}
+    {{ form.squestion.label }}
+    {{ form.squestion(placeholder="Security Question" class="span4") }}
+         
+    {% for message in form.sanswer.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %}
+    {{ form.sanswer.label }}
+    {{ form.sanswer(placeholder="Security Answer" class="span4") }}
+    </div>
+  
+     
+    <p>{{ form.submit(class="btn") }}</p>
+  </form>
+  </div>
+  </div>
+{% endblock %}
