@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peppe - best place to buy and sell</title>    
+    <strong><link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap (2).css') }}">
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    </strong>
+  </head>
+  <body>
+  <div class="container">
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'img/peppe.png') }}"/></a>
+ 
+
+ <!-- <div class="navbar">
+              <div class="navbar-inner"> -->
+                <div class="container"> 
+                <div class="row">
+                <div class="span12">
+                  <ul class="nav nav-tabs">
+                    {% if 'email' in session %}
+                      <li><a href="{{ url_for('welcome') }}" class="active" data-toggle="tooltip" title="Antiques">Home</a></li>
+                      <li><a href="{{ url_for('about') }}" data-toggle="tooltip" title="About">About</a></li>
+                      <li><a href="{{ url_for('contact') }}" data-toggle="tooltip" title="Contact Us">Contact</a></li>
+                      <li><a href="{{ url_for('profile') }}" data-toggle="tooltip" title="Profile">Profile</a></li>
+                      <li><a href="{{ url_for('signout') }}" data-toggle="tooltip" title="Sign out">Sign Out</a></li>
+                    {% else %}
+                      <li><a href="{{ url_for('home') }}" class="active" data-toggle="tooltip" title="Antiques">Home</a></li>
+                      <li><a href="{{ url_for('about') }}" data-toggle="tooltip" title="About Peppe">About</a></li>
+                      <li><a href="{{ url_for('contact') }}" data-toggle="tooltip" title="Contact Us">Contact</a></li>
+                      <li><a href="{{ url_for('signup') }}" data-toggle="tooltip" title="Create a new account">Register</a></li>
+                      <li><a href="{{ url_for('signin') }}" data-toggle="tooltip" title="Sign in to your Peppe account">Login</a></li>
+                    {% endif %}
+         
+                      </div>
+              </div>
+            </div>
+      <div class="row">
+        <div class="span2">
+          <ul class="nav nav-list">
+            <li class="nav-header">Browse by Category</li>
+            <li><a href="#" data-toggle="tooltip" title="Antiques">Antiques</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Auto & Transport">Auto & Transport</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Building & Storage">Building & Storage</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Careers">Careers</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Crops & Feed">Crops & Feed</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Events & Announcements">Events & Announcements</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Livestock $ Other Animals">Livestock $ Other Animals</a></li>
+            
+            <li><a href="#" data-toggle="tooltip" title="Machinery">Machinery</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Miscellaneous">Miscellaneous</a></li>
+            <li><a href="#" data-toggle="tooltip" title="Real Estate">Real Estate</li>
+            <li><a href="#" data-toggle="tooltip" title="Services">Services</a></li>
+
+          </ul>
+        </div>  
+      <div class="span10">  
+        <div class="container">
+        {% block content %}
+        {% endblock %}
+        </div>
+      </div>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    
+  </body>
+</html>
