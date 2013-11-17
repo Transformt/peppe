@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+ 
+{% block content %}
+  <div class="container">
+  
+  <div class="formcont">
+  
+  <div class="formtext">
+  <h1>Register with Us</h1>
+  <br>
+  <br>
+  <form action="{{ url_for('signup') }}" method=post>
+  <div class="control-group warning">
+    {{ form.hidden_tag() }}
+    
+    {% for message in form.firstname.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %}
+    {{ form.firstname.label }}
+    {{ form.firstname(placeholder="Firstname", class="span4") }}
+    
+    {% for message in form.lastname.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %} 
+    {{ form.lastname.label }}
+    {{ form.lastname(placeholder="Lastname", class="span4") }}
+    
+    {% for message in form.phone.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %}
+    {{ form.phone.label }}
+    {{ form.phone(placeholder="Phone Number", class="span4") }}
+
+    
+    {{ form.country_id.label }}
+    {{ form.country_id(class="span4")}}
+
+    {% for message in form.email.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %}
+    {{ form.email.label }}
+    {{ form.email(placeholder="test@example.com", class="span4") }}
+     
+    {% for message in form.password.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %}
+    {{ form.password.label }}
+    {{ form.password(placeholder="Password", class="span4") }}
+    
+    {% for message in form.confirm.errors %}
+      <p><div class="help-inline">{{ message }}</div></p>
+    {% endfor %}
+    {{ form.confirm.label }}
+    {{ form.confirm(placeholder="Confirm Password", class="span4") }}
+     
+    </div>
+    <p>{{ form.submit(class="btn") }}</p>
+  </form>
+  
+  </div>
+  </div>
+  </div>
+{% endblock %}
