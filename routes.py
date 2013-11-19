@@ -9,11 +9,11 @@ from sqlalchemy import *
 import os
 from werkzeug import secure_filename
 from flask.ext.uploads import UploadSet, IMAGES, configure_uploads
-from twilio.rest import TwilioRestClient
-import twilio.twiml
+#from twilio.rest import TwilioRestClient
+#import twilio.twiml
 from datetime import datetime
 import time
-from sms import *
+#from sms import *
 
 
 UPLOAD_FOLDER = 'C:/Users/Princewill/Flaskapp/farmexport/app/static/img/productpics/'
