@@ -16,13 +16,13 @@
       <p><div class="help-inline">{{ message }}</div></p>
     {% endfor %}
     {{ form.squestion.label }}
-    {{ form.squestion(placeholder="Security Question" class="span4") }}
+    {{ form.squestion(placeholder="Security Question", class="span4") }}
          
     {% for message in form.sanswer.errors %}
       <p><div class="help-inline">{{ message }}</div></p>
     {% endfor %}
     {{ form.sanswer.label }}
-    {{ form.sanswer(placeholder="Security Answer" class="span4") }}
+    {{ form.sanswer(placeholder="Security Answer", class="span4") }}
     </div>
   
      
