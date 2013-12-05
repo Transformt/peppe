@@ -10,7 +10,7 @@
   </head>
   <body>
   <div class="container">
-      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'img/peppe.png') }}"/></a>
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'img/peppe(1).png') }}"/></a>
  
 
  <!-- <div class="navbar">
@@ -18,24 +18,29 @@
                 <div class="container"> 
                 <div class="row">
                 <div class="span12">
+		<div class="nav-collapse">
                   <ul class="nav nav-tabs">
                     {% if 'email' in session %}
-                      <li><a href="{{ url_for('welcome') }}" class="active" data-toggle="tooltip" title="Antiques">Home</a></li>
-                      <li><a href="{{ url_for('about') }}" data-toggle="tooltip" title="About">About</a></li>
-                      <li><a href="{{ url_for('contact') }}" data-toggle="tooltip" title="Contact Us">Contact</a></li>
-                      <li><a href="{{ url_for('profile') }}" data-toggle="tooltip" title="Profile">Profile</a></li>
-                      <li><a href="{{ url_for('signout') }}" data-toggle="tooltip" title="Sign out">Sign Out</a></li>
+                      <a href="{{ url_for('welcome') }}" class="btn btn-large btn-peppe" data-toggle="tooltip" title="Antiques">Peppe</a>
+                      <a href="{{ url_for('about') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="About">About</a>
+                      <a href="{{ url_for('contact') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Contact Us">Contact</a>
+                      <a href="{{ url_for('profile') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Profile">Profile</a>
+                      <a href="{{ url_for('signout') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Sign out">Sign Out</a>
                     {% else %}
-                      <li><a href="{{ url_for('home') }}" class="active" data-toggle="tooltip" title="Antiques">Home</a></li>
-                      <li><a href="{{ url_for('about') }}" data-toggle="tooltip" title="About Peppe">About</a></li>
-                      <li><a href="{{ url_for('contact') }}" data-toggle="tooltip" title="Contact Us">Contact</a></li>
-                      <li><a href="{{ url_for('signup') }}" data-toggle="tooltip" title="Create a new account">Register</a></li>
-                      <li><a href="{{ url_for('signin') }}" data-toggle="tooltip" title="Sign in to your Peppe account">Login</a></li>
+                      <a href="{{ url_for('home') }}" class="btn btn-large btn-peppe" data-toggle="tooltip" title="Antiques"><i class="icon-home icon-white"></i>Peppe</a>
+		      <a href="{{ url_for('signup') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Create a new account">Register</a>
+                      <a href="{{ url_for('about') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="About Peppe">About</a>
+                      <a href="{{ url_for('contact') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Contact Us">Contact</a>
+                      
+                      <a href="{{ url_for('signin') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Sign in to your Peppe account">Login</a>
+		      <input type="text" class="span2 search-query btn btn-large btn-custom" placeholder="Search items"/>
+			
                     {% endif %}
-         
-                      </div>
+                </ul>
+                      
               </div>
             </div>
+      
       <div class="row">
         <div class="span2">
           <ul class="nav nav-list">
@@ -61,6 +66,12 @@
         {% endblock %}
         </div>
       </div>
+     <footer class="footer" style="background-color:white;">
+     <div class="container">
+    <legend></legend>
+	<address>&copy; 2013 Initas Technologies&nbsp;&nbsp;&nbsp;&nbsp;info@peppe.com | +234 805 826 4146 &nbsp;&nbsp;&nbsp;&nbsp;10 Awoniyi Elemo Str, Osolo Way, Isolo, Lagos, Nigeria</address>
+</div>
+</footer>
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     

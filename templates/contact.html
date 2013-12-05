@@ -6,10 +6,10 @@
   <div class="formcont">
   
   <div class="formtext">
-  <h1>Send Us a Message</h1>  
+  <h3>Send Us a Message</h3>  
   
-  <br>
-  <form action="{{ url_for('contact') }}" method=post>
+  <div class="pull-left">
+  <form action="{{ url_for('contact') }}" method=post class="well">
   <div class="control-group warning">  
   {% if success %}
     <p>Thank you for your message. We'll get back to you shortly.</p>

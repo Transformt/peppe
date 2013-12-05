@@ -131,20 +131,19 @@ def signin():
       session['email'] = form.email.data
       signin = User.query.filter_by(email = session['email']).first()
       if signin:
-        signin = db_session.query(User.lastname).filter(User.email == session['email']).first()
-        signfirst = db_session.query(User.firstname).filter(User.email == session['email']).first()
-        signphone = db_session.query(User.phone).filter(User.email == session['email']).first()
-        signcountry_id = db_session.query(User.country_id).filter(User.email == session['email']).first()
-      session['lastname'] = signin
-      session['firstname'] = signfirst
-      session['phone'] = signphone
-      session['country_id'] = signcountry_id
-      
+        session['lastname'] = db_session.query(User.lastname).filter(User.email == session['email']).first()
+        session['firstname'] = db_session.query(User.firstname).filter(User.email == session['email']).first()
+        session['phone'] = db_session.query(User.phone).filter(User.email == session['email']).first()
+        session['country_id'] = db_session.query(User.country_id).filter(User.email == session['email']).first()
+      session['lastname'] = session['lastname']
+      session['firstname'] = session['firstname']
+      session['phone'] = session['phone']
+      session['country_id'] = session['country_id']
       
       if session['country_id'] == db_session.query(User.country_id).filter(User.country_id == 1).first():
-        session['country_id'] = 'Nigerian'
+        session['country_id'] == 'Nigerian'
       else:
-        session['country_id'] = 'Foreigner'
+        session['country_id'] == 'Foreigner'
       
       return redirect(url_for('welcome', form=form))
                 

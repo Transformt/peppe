@@ -6,10 +6,10 @@
   <div class="formcont">
   
   <div class="formtext">
-  <h1>Register with Us</h1>
-  <br>
-  <br>
-  <form action="{{ url_for('signup') }}" method=post>
+  <h3>Register with Us</h3>
+
+  <div class="pull-left">
+  <form action="{{ url_for('signup') }}" method=post class="well">
   <div class="control-group warning">
     {{ form.hidden_tag() }}
     
@@ -57,6 +57,7 @@
     <p>{{ form.submit(class="btn") }}</p>
   </form>
   
+  </div>
   </div>
   </div>
   </div>

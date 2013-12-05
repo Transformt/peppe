@@ -5,10 +5,10 @@
   <div class="sign">
   
   <div class="signtext">
-  <h1>Membership Login</h1>
-   
-  <br>
-  <form action="{{ url_for('signin') }}" method=post class="form-horizontal">
+  <h3>Membership Login</h3>
+
+  <div class="pull-left">
+  <form action="{{ url_for('signin') }}" method=post class="well">
    <div class="control-group warning">
     {{ form.hidden_tag() }}
     {% for message in form.email.errors %}
@@ -31,4 +31,5 @@
   </div>
   </div>
   </div>
+
 {% endblock %}
