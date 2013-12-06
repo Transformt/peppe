@@ -10,7 +10,7 @@
   </head>
   <body>
   <div class="container">
-      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'img/peppe(1).png') }}"/></a>
+      <a href="{{ url_for('home') }}"><img src="{{ url_for('static', filename = 'img/peppe2.png') }}"/></a>
  
 
  <!-- <div class="navbar">
@@ -29,12 +29,14 @@
                     {% else %}
                       <a href="{{ url_for('home') }}" class="btn btn-large btn-peppe" data-toggle="tooltip" title="Antiques"><i class="icon-home icon-white"></i>Peppe</a>
 		      <a href="{{ url_for('signup') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Create a new account">Register</a>
-                      <a href="{{ url_for('about') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="About Peppe">About</a>
-                      <a href="{{ url_for('contact') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Contact Us">Contact</a>
-                      
-                      <a href="{{ url_for('signin') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Sign in to your Peppe account">Login</a>
-		      <input type="text" class="span2 search-query btn btn-large btn-custom" placeholder="Search items"/>
-			
+                      <!-- <a href="{{ url_for('about') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="About Peppe">About</a> -->              
+                      <a href="{{ url_for('signin') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Sign in to your Peppe account">Sign in</a>
+		      
+		      <div class="btn btn-custom disabled"><input type="text" class="span5 search-query" placeholder="Search items"/>  
+                     <button type="submit" class="btn">Search</button></div>
+
+		      <a href="{{ url_for('contact') }}" class="btn btn-large btn-custom" data-toggle="tooltip" title="Contact Us">Contact</a>
+		      
                     {% endif %}
                 </ul>
                       
@@ -66,12 +68,19 @@
         {% endblock %}
         </div>
       </div>
-     <footer class="footer" style="background-color:white;">
+     <div class="span12">
      <div class="container">
+     <div id="footer">
+     <ul class="nav nav-tabs fixed-bottom">
+    
     <legend></legend>
 	<address>&copy; 2013 Initas Technologies&nbsp;&nbsp;&nbsp;&nbsp;info@peppe.com | +234 805 826 4146 &nbsp;&nbsp;&nbsp;&nbsp;10 Awoniyi Elemo Str, Osolo Way, Isolo, Lagos, Nigeria</address>
 </div>
+</div>
+</div>
+</ul>
 </footer>
+
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     
